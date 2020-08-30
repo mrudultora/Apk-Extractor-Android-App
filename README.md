@@ -15,4 +15,9 @@ This Apk Extractor comes with many built-in features.
 
 <b>I have uploaded this app on Google Play Store. Have a look at that one. <a href ="https://play.google.com/store/apps/details?id=com.toralabs.apkextractor">View Now</a></b><br><br>
 
-Feel free to fork and contribute to this repository. And, if you used this project to create your own app, email me your app link. I will add them to this readme.
+Feel free to fork and contribute to this repository. And, if you used this project to create your own app, email me your app link. I will add them to this readme.<br><br>
+
+<b>Attaching few Screenshots :</b><br>
+![alt text](https://raw.githubusercontent.com/mrudultora/Apk-Extractor-Android-App/blob/master/screenshots/1.jpg)
+![alt text](https://raw.githubusercontent.com/mrudultora/Apk-Extractor-Android-App/blob/master/screenshots/2.jpg)
+![alt text](https://raw.githubusercontent.com/mrudultora/Apk-Extractor-Android-App/blob/master/screenshots/3.jpg)
