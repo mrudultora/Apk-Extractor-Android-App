@@ -432,9 +432,6 @@ public class MainActivity extends AppCompatActivity implements PurchasesUpdatedL
                             setupbillingclient();
                         }
                         return true;
-//                    case R.id.language:
-//                        dialog_lang();
-//                        return true;
                     case R.id.contact:
                         Intent i = new Intent(Intent.ACTION_SEND);
                         i.setType("message/rfc822");
@@ -626,68 +623,6 @@ public class MainActivity extends AppCompatActivity implements PurchasesUpdatedL
 
     public void getLanguage() {
         changeLanguage(preferences.getLanguage());
-    }
-
-    public void dialog_lang() {
-        final Dialog dialog = new Dialog(MainActivity.this);
-        dialog.setContentView(R.layout.dialog_lang);
-        dialog.setCanceledOnTouchOutside(true);
-        dialog.setCancelable(true);
-        eng = dialog.findViewById(R.id.eng);
-        french = dialog.findViewById(R.id.french);
-        spanish = dialog.findViewById(R.id.spanish);
-        hindi = dialog.findViewById(R.id.hindi);
-        german = dialog.findViewById(R.id.german);
-        russian = dialog.findViewById(R.id.russian);
-        eng.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                changeLanguage("en");
-                recreate();
-                dialog.dismiss();
-            }
-        });
-        french.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                changeLanguage("fr");
-                recreate();
-                dialog.dismiss();
-            }
-        });
-        spanish.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                changeLanguage("es");
-                recreate();
-                dialog.dismiss();
-            }
-        });
-        hindi.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                changeLanguage("hi");
-                recreate();
-                dialog.dismiss();
-            }
-        });
-        german.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                changeLanguage("de");
-                recreate();
-                dialog.dismiss();
-            }
-        });
-        russian.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                changeLanguage("ru");
-                recreate();
-                dialog.dismiss();
-            }
-        });
-        dialog.show();
     }
 
 }

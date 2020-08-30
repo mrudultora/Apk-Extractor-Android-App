@@ -18,8 +18,8 @@
     <string name="sortsize2">Sort By Size ↓</string>
     <string name="allapps">All Apps</string>
     <string name="extract">Extracting Apk...</string>
-    <string name="banner">310221940080933_310222456747548</string>
-    <string name="nativead">310221940080933_314859456283848</string>
-    <string name="fullscreenad">#310221940080933_310223880080739</string>
+    <string name="banner">Your Id</string>
+    <string name="nativead">Your Id</string>
+    <string name="fullscreenad">Your Id</string>
 
 </resources>
