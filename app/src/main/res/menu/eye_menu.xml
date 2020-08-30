@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/allapps"
+        android:title="@string/allapps"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/systemapps"
+        android:title="@string/systemapps"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/installed"
+        android:title="@string/installed"
+        app:showAsAction="never" />
+</menu>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Apk Extractor</string>
+    <string name="sortsize2">Сортировать по размеру ↓</string>
+    <string name="sortsize1">Сортировать по размеру ↑</string>
+    <string name="sortalpha1">Сортировать по алфавиту ↑</string>
+    <string name="sortalpha2">Сортировать по алфавиту ↓</string>
+    <string name="allapps">Все приложения</string>
+    <string name="copyright" translatable="false">©ToraLabs</string>
+    <string name="search">Поиск</string>
+    <string name="loading">Загрузка приложений</string>
+    <string name="rate">Оцените нас</string>
+    <string name="share">Поделиться приложением</string>
+    <string name="darkmode">Темный режим</string>
+    <string name="lightmode">Легкий режим</string>
+    <string name="language">Выберите язык</string>
+    <string name="developer">Связаться с нами</string>
+    <string name="removeads">Убрать рекламу</string>
+    <string name="systemapps">Системные приложения</string>
+    <string name="installed">Установленные приложения</string>
+    <string name="extract">Extracting Apk...</string>
+    <string name="banner">310221940080933_310222456747548</string>
+    <string name="nativead">310221940080933_314859456283848</string>
+    <string name="fullscreenad">#310221940080933_310223880080739</string>
+</resources>

@@ -1,0 +1,2 @@
+rootProject.name='Apk Extractor'
+include ':app'

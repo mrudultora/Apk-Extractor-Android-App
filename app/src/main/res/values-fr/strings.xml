@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Apk Extractor</string>
+    <string name="copyright">©ToraLabs</string>
+    <string name="search">Chercher</string>
+    <string name="loading">Chargement des applications</string>
+    <string name="rate">Évaluez nous</string>
+    <string name="share">Partager l\'application</string>
+    <string name="darkmode">Mode sombre</string>
+    <string name="lightmode">Mode lumière</string>
+    <string name="language">Choisissez la langue</string>
+    <string name="developer">Nous contacter</string>
+    <string name="removeads">Supprimez la pub</string>
+    <string name="systemapps">Applications système</string>
+    <string name="installed">Applications installées</string>
+    <string name="allapps">Toutes les applications</string>
+    <string name="sortalpha1">Trier par ordre alphabétique ↑</string>
+    <string name="sortalpha2">Trier par ordre alphabétique ↓</string>
+    <string name="sortsize1">Trier par taille ↑</string>
+    <string name="sortsize2">Trier par taille ↓</string>
+    <string name="extract">Extracting Apk...</string>
+    <string name="banner">310221940080933_310222456747548</string>
+    <string name="nativead">310221940080933_314859456283848</string>
+    <string name="fullscreenad">#310221940080933_310223880080739</string>
+</resources>
