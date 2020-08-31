@@ -1,8 +1,8 @@
 # Apk-Extractor-Android-App
 
-⭐ Star this project on GitHub — it helps!
-
-This Apk Extractor comes with many built-in features. 
+⭐ Star this project on GitHub — it helps!<br><br>
+<img src="https://img.shields.io/badge/platform-Android-brightgreen.svg" alt="Platform"/>     <img src="https://img.shields.io/badge/API-17%2B-blue.svg" alt="API" /><br>
+<br>This Apk Extractor comes with many built-in features. 
 <h2>Main features are :</h2><br>
 • Can extract both System Apps as well as Installed Apps.<br>
 • Supports both Light and Dark theme.<br>
