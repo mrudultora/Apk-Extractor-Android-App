@@ -187,19 +187,12 @@ public class AppListAdapter extends RecyclerView.Adapter<AppListAdapter.Viewhold
 
     }
 
+    // This will work till Android Q (Currently, Android R is not yet released.)
     public String pathToStore(int i, int position) {
         if (i == 0) {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                return Environment.DIRECTORY_DOWNLOADS;
-            } else {
-                return Environment.getExternalStorageDirectory().getAbsolutePath() + "/Apk Extractor (ToraLabs)/";
-            }
+            return Environment.getExternalStorageDirectory().getAbsolutePath() + "/Apk Extractor (ToraLabs)/";
         } else {
-            if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.Q) {
-                return Environment.DIRECTORY_DOWNLOADS + list.get(position).getName() + ".apk";
-            } else {
-                return Environment.getExternalStorageDirectory().getAbsolutePath() + "/Apk Extractor (ToraLabs)/" + list.get(position).getName() + ".apk";
-            }
+            return Environment.getExternalStorageDirectory().getAbsolutePath() + "/Apk Extractor (ToraLabs)/" + list.get(position).getName() + ".apk";
         }
     }
 
