@@ -55,42 +55,13 @@
         android:textSize="16sp"
         android:textStyle="normal" />
 
-    <androidx.core.widget.NestedScrollView
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_above="@id/banner"
-        android:layout_below="@id/toolbar">
-
-        <RelativeLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content">
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/recyclerView"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_margin="5dp"
-                android:visibility="gone" />
-
-            <com.facebook.ads.NativeAdLayout
-                android:id="@+id/native_ad_container"
-                android:layout_width="match_parent"
-                android:layout_marginTop="5dp"
-                android:layout_height="wrap_content"
-                android:layout_below="@id/recyclerView"
-                android:layout_marginBottom="30dp"
-                android:orientation="vertical"
-                android:visibility="gone" />
-        </RelativeLayout>
-    </androidx.core.widget.NestedScrollView>
-
-    <LinearLayout
-        android:id="@+id/banner"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:orientation="vertical"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
+        android:layout_margin="5dp"
         android:visibility="gone" />
 
 </RelativeLayout>

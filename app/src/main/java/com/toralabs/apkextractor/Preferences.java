@@ -30,13 +30,4 @@ class Preferences extends Activity {
     public boolean getMode() {
         return sharedPreferences.getBoolean("bKey", false);
     }
-
-    public void setLanguage(String locale) {
-        SharedPreferences.Editor e = sharedPreferences.edit();
-        e.putString("lang", locale).apply();
-    }
-
-    public String getLanguage() {
-        return sharedPreferences.getString("lang", "en");
-    }
 }

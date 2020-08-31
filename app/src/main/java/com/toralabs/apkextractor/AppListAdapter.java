@@ -8,13 +8,10 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Environment;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -22,19 +19,6 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.core.app.ActivityCompat;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.facebook.ads.Ad;
-import com.facebook.ads.AdError;
-import com.facebook.ads.AdIconView;
-import com.facebook.ads.AdOptionsView;
-import com.facebook.ads.AdSize;
-import com.facebook.ads.AdView;
-import com.facebook.ads.InterstitialAd;
-import com.facebook.ads.InterstitialAdListener;
-import com.facebook.ads.MediaView;
-import com.facebook.ads.NativeAd;
-import com.facebook.ads.NativeAdLayout;
-import com.facebook.ads.NativeAdListener;
 import com.google.android.material.snackbar.Snackbar;
 
 import java.io.File;
@@ -50,22 +34,11 @@ import java.util.List;
 public class AppListAdapter extends RecyclerView.Adapter<AppListAdapter.Viewholder> {
     private Context context;
     private List<AppListModel> list;
-    private InterstitialAd interstitialAd;
-    private Preferences preferences;
-    private int CONTENT = 0;
-    private int AD = 1;
     AlertDialog dialog;
-    MainActivity main;
 
     public AppListAdapter(Context context, List<AppListModel> list) {
         this.context = context;
         this.list = list;
-        main = new MainActivity();
-    }
-
-    @Override
-    public int getItemViewType(int position) {
-        return CONTENT;
     }
 
     @NonNull
@@ -77,10 +50,6 @@ public class AppListAdapter extends RecyclerView.Adapter<AppListAdapter.Viewhold
 
     @Override
     public void onBindViewHolder(@NonNull final Viewholder holder, final int position) {
-//        if (position == list.size() - 1) {
-//            Toast.makeText(context,"Last Item Visible.", Toast.LENGTH_SHORT).show();
-//            main.getAd(context);
-//        }
         holder.img_icon.setImageDrawable(list.get(position).getIcon());
         holder.name.setText(list.get(position).getName());
         holder.packagename.setText(list.get(position).getPackagename());
@@ -136,10 +105,6 @@ public class AppListAdapter extends RecyclerView.Adapter<AppListAdapter.Viewhold
     private boolean extract(int position, View v) {
         File file = new File(String.valueOf(list.get(position).getFile()));
         if (ActivityCompat.checkSelfPermission(context, Manifest.permission.WRITE_EXTERNAL_STORAGE) == PackageManager.PERMISSION_GRANTED) {
-            preferences = new Preferences(context);
-            if (!preferences.getSharedPref()) {
-                showFullScreenAd();
-            }
             File dir = new File(pathToStore(0, position));
             if (!dir.exists()) {
                 dir.mkdir();
@@ -236,42 +201,6 @@ public class AppListAdapter extends RecyclerView.Adapter<AppListAdapter.Viewhold
                 return Environment.getExternalStorageDirectory().getAbsolutePath() + "/Apk Extractor (ToraLabs)/" + list.get(position).getName() + ".apk";
             }
         }
-    }
-
-    public void showFullScreenAd() {
-        interstitialAd = new InterstitialAd(context.getApplicationContext(), context.getResources().getString(R.string.fullscreenad));
-        interstitialAd.setAdListener(new InterstitialAdListener() {
-            @Override
-            public void onInterstitialDisplayed(Ad ad) {
-
-            }
-
-            @Override
-            public void onInterstitialDismissed(Ad ad) {
-
-            }
-
-            @Override
-            public void onError(Ad ad, AdError adError) {
-            }
-
-            @Override
-            public void onAdLoaded(Ad ad) {
-
-                interstitialAd.show();
-            }
-
-            @Override
-            public void onAdClicked(Ad ad) {
-
-            }
-
-            @Override
-            public void onLoggingImpression(Ad ad) {
-
-            }
-        });
-        interstitialAd.loadAd();
     }
 
     public void showDialog(boolean visiblity) {

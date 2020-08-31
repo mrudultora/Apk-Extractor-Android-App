@@ -8,22 +8,16 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.annotation.SuppressLint;
-import android.app.Dialog;
 import android.content.Intent;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageManager;
-import android.content.res.Configuration;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
-import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.inputmethod.EditorInfo;
-import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -44,24 +38,12 @@ import com.android.billingclient.api.PurchasesUpdatedListener;
 import com.android.billingclient.api.SkuDetails;
 import com.android.billingclient.api.SkuDetailsParams;
 import com.android.billingclient.api.SkuDetailsResponseListener;
-import com.facebook.ads.Ad;
-import com.facebook.ads.AdError;
-import com.facebook.ads.AdIconView;
-import com.facebook.ads.AdOptionsView;
-import com.facebook.ads.AdSize;
-import com.facebook.ads.AdView;
-import com.facebook.ads.AudienceNetworkAds;
-import com.facebook.ads.MediaView;
-import com.facebook.ads.NativeAd;
-import com.facebook.ads.NativeAdLayout;
-import com.facebook.ads.NativeAdListener;
 
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
-import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity implements PurchasesUpdatedListener {
 
@@ -81,23 +63,15 @@ public class MainActivity extends AppCompatActivity implements PurchasesUpdatedL
     long longsize;
     BillingClient billingClient;
     List<String> skuList = new ArrayList<>();
-    private String sku = "remove_ads";
+    private String sku = "remove_ads";   // important for in-app purchase
     boolean bool;
     LottieAnimationView lottie;
     Preferences preferences;
-    TextView eng, french, spanish, hindi, german, russian;
-    AdView adView;
-    NativeAdLayout nativeAdLayout;
-    LinearLayout ad;
-    NativeAd nativeAd;
-    LinearLayout adContainer;
-    int show = 0;
 
     @SuppressLint("WrongConstant")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        AudienceNetworkAds.initialize(this);
         preferences = new Preferences(MainActivity.this);
         boolean b = preferences.getMode();
         if (b) {
@@ -105,9 +79,7 @@ public class MainActivity extends AppCompatActivity implements PurchasesUpdatedL
         } else {
             AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_NO);
         }
-//        getLanguage();
         setContentView(R.layout.activity_main);
-        adContainer = (LinearLayout) findViewById(R.id.banner);
         recyclerView = findViewById(R.id.recyclerView);
         txt_load = findViewById(R.id.txt_load);
         progressBar = findViewById(R.id.progressbar);
@@ -118,7 +90,6 @@ public class MainActivity extends AppCompatActivity implements PurchasesUpdatedL
         img_eye = findViewById(R.id.img_eye);
         lottie = findViewById(R.id.lottie);
         txt_copyright = findViewById(R.id.txt_copyright);
-        nativeAdLayout = findViewById(R.id.native_ad_container);
 
         PackageManager packageManager = getPackageManager();
         packagelist = packageManager.getInstalledApplications(PackageManager.GET_META_DATA);
@@ -160,80 +131,6 @@ public class MainActivity extends AppCompatActivity implements PurchasesUpdatedL
         });
         invalidateOptionsMenu();
         bool = preferences.getSharedPref();
-        if (!preferences.getSharedPref()) {
-            adView = new AdView(MainActivity.this, getResources().getString(R.string.banner), AdSize.BANNER_HEIGHT_50);
-            adContainer.addView(adView);
-            adView.loadAd();
-            adContainer.setVisibility(View.VISIBLE);
-            getLastItem();
-        }
-    }
-
-    public void getAd() {
-        ViewGroup.LayoutParams params = recyclerView.getLayoutParams();
-        params.height = ViewGroup.LayoutParams.WRAP_CONTENT;
-        params.width = ViewGroup.LayoutParams.MATCH_PARENT;
-        recyclerView.setLayoutParams(params);
-        nativeAd = new NativeAd(MainActivity.this, getResources().getString(R.string.nativead));
-        nativeAd.setAdListener(new NativeAdListener() {
-            @Override
-            public void onMediaDownloaded(Ad ad) {
-            }
-
-            @Override
-            public void onError(Ad ad, AdError adError) {
-            }
-
-            @Override
-            public void onAdLoaded(Ad ad) {
-                if (nativeAd == null || nativeAd != ad) {
-                    return;
-                }
-                inflateAd(nativeAd);
-            }
-
-            @Override
-            public void onAdClicked(Ad ad) {
-            }
-
-            @Override
-            public void onLoggingImpression(Ad ad) {
-            }
-        });
-        nativeAd.loadAd();
-    }
-
-    private void inflateAd(NativeAd nativeAd) {
-        nativeAd.unregisterView();
-        nativeAdLayout.setVisibility(View.VISIBLE);
-        LayoutInflater inflater = LayoutInflater.from(MainActivity.this);
-        ad = (LinearLayout) inflater.inflate(R.layout.nativead_layout, nativeAdLayout, false);
-        nativeAdLayout.addView(ad);
-        LinearLayout adChoicesContainer = (MainActivity.this).findViewById(R.id.ad_choices_container);
-        AdOptionsView adOptionsView = new AdOptionsView((MainActivity.this), nativeAd, nativeAdLayout);
-        adChoicesContainer.removeAllViews();
-        adChoicesContainer.addView(adOptionsView, 0);
-        AdIconView nativeAdIcon = ad.findViewById(R.id.native_ad_icon);
-        TextView nativeAdTitle = ad.findViewById(R.id.native_ad_title);
-        MediaView nativeAdMedia = ad.findViewById(R.id.native_ad_media);
-        TextView nativeAdSocialContext = ad.findViewById(R.id.native_ad_social_context);
-        TextView nativeAdBody = ad.findViewById(R.id.native_ad_body);
-        TextView sponsoredLabel = ad.findViewById(R.id.native_ad_sponsored_label);
-        Button nativeAdCallToAction = ad.findViewById(R.id.native_ad_call_to_action);
-        nativeAdTitle.setText(nativeAd.getAdvertiserName());
-        nativeAdBody.setText(nativeAd.getAdBodyText());
-        nativeAdSocialContext.setText(nativeAd.getAdSocialContext());
-        nativeAdCallToAction.setVisibility(nativeAd.hasCallToAction() ? View.VISIBLE : View.INVISIBLE);
-        nativeAdCallToAction.setText(nativeAd.getAdCallToAction());
-        sponsoredLabel.setText(nativeAd.getSponsoredTranslation());
-        List<View> clickableViews = new ArrayList<>();
-        clickableViews.add(nativeAdTitle);
-        clickableViews.add(nativeAdCallToAction);
-        nativeAd.registerViewForInteraction(
-                ad,
-                nativeAdMedia,
-                nativeAdIcon,
-                clickableViews);
     }
 
     public void filter(String s) {
@@ -248,7 +145,6 @@ public class MainActivity extends AppCompatActivity implements PurchasesUpdatedL
             appListAdapter.filteredList(arrayList);
             if (arrayList.size() == 0) {
                 lottie.setVisibility(View.VISIBLE);
-                nativeAdLayout.setVisibility(View.GONE);
             }
         } else {
             Toast.makeText(getApplicationContext(), "Please Wait...", Toast.LENGTH_SHORT).show();
@@ -447,6 +343,7 @@ public class MainActivity extends AppCompatActivity implements PurchasesUpdatedL
         popupMenu.show();
     }
 
+    // to use in app purchase ... (just add new item in Play Console -> Store Presence -> In-app product -> Managed Products with id as remove_ads(same as SKU) ).
     public void setupbillingclient() {
         billingClient = BillingClient.newBuilder(this).enablePendingPurchases().setListener(this).build();
         billingClient.startConnection(new BillingClientStateListener() {
@@ -540,15 +437,6 @@ public class MainActivity extends AppCompatActivity implements PurchasesUpdatedL
         }
     }
 
-    public void changeLanguage(String l) {
-        Locale locale = new Locale(l);
-        Locale.setDefault(locale);
-        Configuration configuration = new Configuration(getApplicationContext().getResources().getConfiguration());
-        configuration.setLocale(locale);
-        getBaseContext().createConfigurationContext(configuration);
-        preferences.setLanguage(l);
-    }
-
     class NewThread extends Thread {
         @Override
         public void run() {
@@ -598,31 +486,6 @@ public class MainActivity extends AppCompatActivity implements PurchasesUpdatedL
                 }
             }
         }
-    }
-
-    public void getLastItem() {
-        recyclerView.addOnScrollListener(new RecyclerView.OnScrollListener() {
-            @Override
-            public void onScrolled(@NonNull RecyclerView recyclerView, int dx, int dy) {
-                super.onScrolled(recyclerView, dx, dy);
-                if (show == 0) {
-                    if (!recyclerView.canScrollVertically(1)) {
-                        getAd();
-                        show = 1;
-                    }
-                }
-            }
-
-            @Override
-            public void onScrollStateChanged(@NonNull RecyclerView recyclerView, int newState) {
-                super.onScrollStateChanged(recyclerView, newState);
-
-            }
-        });
-    }
-
-    public void getLanguage() {
-        changeLanguage(preferences.getLanguage());
     }
 
 }

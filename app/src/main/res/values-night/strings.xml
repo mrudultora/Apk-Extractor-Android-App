@@ -17,9 +17,5 @@
     <string name="sortsize1">Sort By Size ↑</string>
     <string name="sortsize2">Sort By Size ↓</string>
     <string name="allapps">All Apps</string>
-    <string name="extract">Extracting Apk...</string>
-    <string name="banner">Your Id</string>
-    <string name="nativead">Your Id</string>
-    <string name="fullscreenad">Your Id</string>
-
+    <string name="extract">Extracting Apk…</string>
 </resources>

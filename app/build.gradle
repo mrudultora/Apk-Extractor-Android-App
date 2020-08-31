@@ -33,7 +33,5 @@ dependencies {
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.google.android.material:material:1.2.0'
     implementation 'com.android.billingclient:billing:3.0.0'
-    implementation 'com.github.hotchemi:android-rate:1.0.1'
-    implementation 'com.facebook.android:audience-network-sdk:5.8.0'
     implementation 'com.airbnb.android:lottie:3.4.1'
 }
