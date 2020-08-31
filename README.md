@@ -1,7 +1,10 @@
-# Apk-Extractor-Android-App
+# Apk Extractor Android App
+<p align="center">
+   <img src="https://raw.githubusercontent.com/mrudultora/Apk-Extractor-Android-App/master/screenshots/feature.png" width="800" height="300"/><br>
+ <img src="https://img.shields.io/badge/platform-Android-brightgreen.svg" alt="Platform"/>     <img src="https://img.shields.io/badge/API-17%2B-blue.svg" alt="API" /><br>
+</p><br>
 
 ⭐ Star this project on GitHub — it helps!<br><br>
-<img src="https://img.shields.io/badge/platform-Android-brightgreen.svg" alt="Platform"/>     <img src="https://img.shields.io/badge/API-17%2B-blue.svg" alt="API" /><br>
 <br>This Apk Extractor comes with many built-in features. 
 <h2>Main features are :</h2><br>
 • Can extract both System Apps as well as Installed Apps.<br>
