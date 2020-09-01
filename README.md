@@ -14,7 +14,9 @@ This Apk Extractor comes with many built-in features.
 • Sorting the list of apps available on device in alphabetical order.<br>
 • Sorting the list of apps available on device on the basis of Size.<br>
 • Enhanced look of UI.<br>
-• Sharing the apk directly from this app possible.<br><br>
+• Sharing the apk directly from this app possible.<br>
+• Works flawlessly on every device.<br>
+• <b>No ROOT ACCESS required.</b><br><br>
 
 <b>I have uploaded this app on Google Play Store. Have a look at that one. <a href ="https://play.google.com/store/apps/details?id=com.toralabs.apkextractor">View Now</a></b><br><br>
 
