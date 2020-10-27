@@ -7,16 +7,17 @@
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="15dp"
-        android:progressBackgroundTint="@color/colorAccent" />
+        android:padding="15dp" />
 
     <TextView
+        android:id="@+id/tv_progress"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:layout_toRightOf="@id/progressBar"
-        android:text="@string/extract"
+        android:text="@string/extracting"
         android:textColor="@color/colorAccent"
-        android:textSize="16sp" />
+        android:textSize="16.5sp"
+        android:textStyle="bold" />
 
 </RelativeLayout>

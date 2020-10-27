@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/ext"
+        android:title="@string/extract" />
+    <item
+        android:id="@+id/appinfo"
+        android:title="@string/appinfo" />
+    <item
+        android:id="@+id/saveicon"
+        android:title="@string/saveicon" />
+    <item
+        android:id="@+id/viewonplay"
+        android:title="@string/viewonplay" />
+    <item
+        android:id="@+id/shareapk"
+        android:title="@string/shareapk" />
+
+</menu>

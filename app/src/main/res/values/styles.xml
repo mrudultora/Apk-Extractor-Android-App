@@ -1,11 +1,116 @@
 <resources>
-
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.DayNight.NoActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.DayNight.DarkActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="actionModeBackground">@color/colorPrimary</item>
+    </style>
+
+    <style name="Theme1" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/theme1</item>
+        <item name="colorPrimaryDark">@color/theme1dark</item>
+        <item name="colorAccent">@color/theme1accent</item>
+        <item name="actionModeBackground">@color/theme1</item>
+    </style>
+
+    <style name="Theme2" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/theme2</item>
+        <item name="colorPrimaryDark">@color/theme2dark</item>
+        <item name="colorAccent">@color/theme2accent</item>
+        <item name="actionModeBackground">@color/theme2</item>
+    </style>
+
+    <style name="Theme3" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/theme3</item>
+        <item name="colorPrimaryDark">@color/theme3dark</item>
+        <item name="colorAccent">@color/theme3accent</item>
+        <item name="actionModeBackground">@color/theme3</item>
+    </style>
+
+    <style name="Theme4" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/theme4</item>
+        <item name="colorPrimaryDark">@color/theme4dark</item>
+        <item name="colorAccent">@color/theme4accent</item>
+        <item name="actionModeBackground">@color/theme4</item>
+    </style>
+
+    <style name="Theme5" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/theme5</item>
+        <item name="colorPrimaryDark">@color/theme5dark</item>
+        <item name="colorAccent">@color/theme5accent</item>
+        <item name="actionModeBackground">@color/theme5</item>
+    </style>
+
+    <style name="Theme6" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/theme6</item>
+        <item name="colorPrimaryDark">@color/theme6dark</item>
+        <item name="colorAccent">@color/theme6accent</item>
+        <item name="actionModeBackground">@color/theme6</item>
+    </style>
+
+    <style name="Theme7" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/theme7</item>
+        <item name="colorPrimaryDark">@color/theme7dark</item>
+        <item name="colorAccent">@color/theme7accent</item>
+        <item name="actionModeBackground">@color/theme7</item>
+    </style>
+
+    <style name="Theme8" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/theme8</item>
+        <item name="colorPrimaryDark">@color/theme8dark</item>
+        <item name="colorAccent">@color/theme8accent</item>
+        <item name="actionModeBackground">@color/theme8</item>
+    </style>
+
+    <style name="Theme9" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/theme9</item>
+        <item name="colorPrimaryDark">@color/theme9dark</item>
+        <item name="colorAccent">@color/theme9accent</item>
+        <item name="actionModeBackground">@color/theme9</item>
+    </style>
+
+    <style name="Theme10" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/theme10</item>
+        <item name="colorPrimaryDark">@color/theme10dark</item>
+        <item name="colorAccent">@color/theme10accent</item>
+        <item name="actionModeBackground">@color/theme10</item>
+    </style>
+
+    <style name="Theme11" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/theme11</item>
+        <item name="colorPrimaryDark">@color/theme11dark</item>
+        <item name="colorAccent">@color/theme11accent</item>
+        <item name="actionModeBackground">@color/theme11</item>
+    </style>
+
+    <style name="Theme12" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/theme12</item>
+        <item name="colorPrimaryDark">@color/theme12dark</item>
+        <item name="colorAccent">@color/theme12accent</item>
+        <item name="actionModeBackground">@color/theme12</item>
+    </style>
+
+    <style name="Theme13" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/theme13</item>
+        <item name="colorPrimaryDark">@color/theme13dark</item>
+        <item name="colorAccent">@color/theme13accent</item>
+        <item name="actionModeBackground">@color/theme13</item>
+    </style>
+
+    <style name="Theme14" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/theme14</item>
+        <item name="colorPrimaryDark">@color/theme14dark</item>
+        <item name="colorAccent">@color/theme14accent</item>
+        <item name="actionModeBackground">@color/theme14</item>
+    </style>
+
+    <style name="Theme15" parent="Theme.AppCompat.DayNight.DarkActionBar">
+        <item name="colorPrimary">@color/theme15</item>
+        <item name="colorPrimaryDark">@color/theme15dark</item>
+        <item name="colorAccent">@color/theme15accent</item>
+        <item name="actionModeBackground">@color/theme15</item>
     </style>
 
 </resources>

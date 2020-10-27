@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        android:elevation="3dp"
+        app:cardBackgroundColor="@color/textcolor"
+        app:cardCornerRadius="3dp"
+        tools:targetApi="lollipop">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/btn_open"
+                android:maxLines="3"
+                android:id="@+id/tv_snack"
+                android:paddingTop="20dp"
+                android:paddingBottom="20dp"
+                android:paddingStart="15dp"
+                android:lineSpacingExtra="4dp"
+                android:text=""
+                android:textColor="@color/snackbar_text"
+                android:textSize="15sp"
+                android:paddingLeft="15dp" />
+
+            <Button
+                android:id="@+id/btn_open"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:background="@color/textcolor"
+                android:text="@string/open"
+                android:textAllCaps="true"
+                android:textSize="16sp" />
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</RelativeLayout>

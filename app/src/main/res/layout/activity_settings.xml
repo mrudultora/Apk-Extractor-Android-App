@@ -1,0 +1,468 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rel_settings"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg"
+    tools:context=".activities.SettingsActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/rel_main"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txt_theme"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/theme"
+            android:textColor="@color/pink"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:id="@+id/rel_theme"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_theme"
+            android:background="?android:attr/selectableItemBackground"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/mode_ic"
+                app:tint="@color/darkgrey" />
+
+            <TextView
+                android:id="@+id/theme"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="52dp"
+                android:text="@string/theme"
+                android:textColor="@color/textcolor"
+                android:textSize="16.2sp" />
+
+            <TextView
+                android:id="@+id/text_themename"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/theme"
+                android:layout_marginLeft="52dp"
+                android:layout_marginTop="2dp"
+                android:text="@string/light"
+                android:textColor="@color/darkgrey"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rel_theme"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/color_ic"
+                app:tint="@color/darkgrey" />
+
+            <TextView
+                android:id="@+id/themecolor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="52dp"
+                android:text="@string/themecolor"
+                android:textColor="@color/textcolor"
+                android:textSize="16.2sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/themecolor"
+                android:layout_marginLeft="52dp"
+                android:layout_marginTop="2dp"
+                android:text="@string/themestat"
+                android:textColor="@color/darkgrey"
+                android:textSize="15sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:src="@drawable/circle" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view1"
+            android:layout_width="match_parent"
+            android:layout_height="0.5px"
+            android:layout_below="@id/rel_color"
+            android:background="@color/darkgrey" />
+
+        <TextView
+            android:id="@+id/txt_general"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view1"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/general"
+            android:textColor="@color/pink"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:id="@+id/rel_savedpath"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rel_showext"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="10dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/save_ic"
+                app:tint="@color/darkgrey" />
+
+            <TextView
+                android:id="@+id/path"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="52dp"
+                android:text="@string/saved_path"
+                android:textColor="@color/textcolor"
+                android:textSize="16.2sp" />
+
+            <TextView
+                android:id="@+id/text_path"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/path"
+                android:layout_marginLeft="52dp"
+                android:layout_marginTop="2dp"
+                android:text=""
+                android:textColor="@color/darkgrey"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_convention"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_general"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/namesave_ic"
+                app:tint="@color/darkgrey" />
+
+            <TextView
+                android:id="@+id/exp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="52dp"
+                android:text="@string/name_format"
+                android:textColor="@color/textcolor"
+                android:textSize="16.2sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/exp"
+                android:layout_marginLeft="52dp"
+                android:layout_marginTop="2dp"
+                android:text="@string/naming_convention"
+                android:textColor="@color/darkgrey"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_showext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rel_convention"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/box_ic"
+                app:tint="@color/darkgrey" />
+
+            <TextView
+                android:id="@+id/txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="52dp"
+                android:text="@string/showdetails"
+                android:textColor="@color/textcolor"
+                android:textSize="16.2sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt1"
+                android:layout_marginLeft="52dp"
+                android:layout_marginTop="2dp"
+                android:layout_toLeftOf="@id/switchbtn"
+                android:text="@string/dialog_confirm"
+                android:textColor="@color/darkgrey"
+                android:textSize="15sp" />
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/switchbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="0.5px"
+            android:layout_below="@id/rel_savedpath"
+            android:background="@color/darkgrey" />
+
+        <TextView
+            android:id="@+id/txt_support"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view2"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/support"
+            android:textColor="@color/pink"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:id="@+id/rel_rate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rel_removeads"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/rate_ic"
+                app:tint="@color/darkgrey" />
+
+            <TextView
+                android:id="@+id/txt_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="52dp"
+                android:text="@string/rate"
+                android:textColor="@color/textcolor"
+                android:textSize="16.2sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_rate"
+                android:layout_marginLeft="52dp"
+                android:layout_marginTop="2dp"
+                android:text="@string/rateusstat"
+                android:textColor="@color/darkgrey"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_removeads"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_support"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/money_ic"
+                app:tint="@color/darkgrey" />
+
+            <TextView
+                android:id="@+id/txt_remove"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="52dp"
+                android:text="@string/removeads"
+                android:textColor="@color/textcolor"
+                android:textSize="16.2sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_remove"
+                android:layout_marginLeft="52dp"
+                android:layout_marginTop="2dp"
+                android:text="@string/adsstat"
+                android:textColor="@color/darkgrey"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/view3"
+            android:layout_width="match_parent"
+            android:layout_height="0.5px"
+            android:layout_below="@id/rel_rate"
+            android:background="@color/darkgrey" />
+
+        <TextView
+            android:id="@+id/txt_other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view3"
+            android:layout_marginLeft="60dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="10dp"
+            android:text="@string/other"
+            android:textColor="@color/pink"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:id="@+id/rel_feedback"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_other"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/email"
+                app:tint="@color/darkgrey" />
+
+            <TextView
+                android:id="@+id/txt_feedback"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="52dp"
+                android:text="@string/feedback"
+                android:textColor="@color/textcolor"
+                android:textSize="16.2sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_feedback"
+                android:layout_marginLeft="52dp"
+                android:layout_marginTop="2dp"
+                android:text="@string/feedstat"
+                android:textColor="@color/darkgrey"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_app_version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rel_feedback"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="10dp">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/info"
+                app:tint="@color/darkgrey" />
+
+            <TextView
+                android:id="@+id/txt_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="52dp"
+                android:text="@string/appversion"
+                android:textColor="@color/textcolor"
+                android:textSize="16.2sp" />
+
+            <TextView
+                android:id="@+id/text_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_version"
+                android:layout_marginLeft="52dp"
+                android:layout_marginTop="2dp"
+                android:text=""
+                android:textColor="@color/darkgrey"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rel_translate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rel_app_version"
+            android:background="?android:attr/selectableItemBackground"
+            android:padding="10dp"
+            android:visibility="visible">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:src="@drawable/translate_ic"
+                app:tint="@color/darkgrey" />
+
+            <TextView
+                android:id="@+id/txt_translate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="52dp"
+                android:text="@string/translation"
+                android:textColor="@color/textcolor"
+                android:textSize="16.2sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txt_translate"
+                android:layout_marginLeft="52dp"
+                android:layout_marginTop="2dp"
+                android:text="@string/transstat"
+                android:textColor="@color/darkgrey"
+                android:textSize="15sp" />
+        </RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>
