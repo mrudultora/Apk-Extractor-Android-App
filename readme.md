@@ -1,14 +1,6 @@
 Apk Extractor Android App
 =========================
 
-<p align="center">
-   
-<img src="https://raw.githubusercontent.com/mrudultora/Apk-Extractor-Android-App/master/graphic.png" width="800" height="300"/><br>
-<img src="https://img.shields.io/badge/platform-Android-brightgreen.svg" alt="Platform"/>
-<img src="https://img.shields.io/badge/API-17%2B-blue.svg" alt="API" /><br>
-</p>
-<br>
-
 ⭐ Star this project on GitHub — it helps!<br> This Apk Extractor comes
 with many built-in features.
 <h2>
